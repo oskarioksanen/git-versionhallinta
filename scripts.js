@@ -4,12 +4,12 @@ function setTime() {
   const dateOptions = {
     weekday: 'short',
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   };
   const date = now.toLocaleDateString('fi-FI', dateOptions);
 
-  const datetime = `<p>Tänään on ${date}</p>`;
+  const datetime = `<p>Tänään on:<br><br>${date}</p>`;
   const clock = '<canvas id="analogClock" width="102" height="102" style="margin: 10px">Clock</canvas>'
 
   document.getElementById("datetime").innerHTML = datetime + clock;
